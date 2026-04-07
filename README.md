@@ -1,5 +1,7 @@
 # break-rtk
 
+https://github.com/reduxjs/redux-toolkit/issues/5279
+
 This repository exists to reproduce a `RangeError: Maximum call stack size exceeded` failure in RTK Query when a store contains a large number of `createApi` middlewares.
 
 The default app configuration is intentionally broken. It creates enough RTK Query API slices to trigger a recursive middleware self-registration cascade on the first dispatched query action.
